@@ -1,0 +1,15 @@
+# [INICIO cloudbuild_node]
+steps:
+# Intalación de dependencias
+- name: node
+  entrypoint: npm
+  args: ['install']
+# Ejecutamos pruebas
+- name: node
+  entrypoint: npm
+  args: ['test']
+# Ejecutamos aplicacion
+- name: node
+  entrypoint: npm
+  args: ['run', 'build']
+# [FIN cloudbuild_node]
