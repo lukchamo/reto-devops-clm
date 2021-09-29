@@ -9,8 +9,4 @@ steps:
   env:
     - CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}
     - CLOUDSDK_CONTAINER_CLOUSTER=${_CLOUDSDK_CONTAINER_CLOUSTER}
-# Ejecutamos aplicacion
-- name: node
-  entrypoint: npm
-  args: ['start']
 # [FIN cloudbuild_node]
