@@ -1,13 +1,14 @@
 # [INICIO cloudbuild_node]
 steps:
 # Intalación de dependencias
-- name: node
-  entrypoint: npm
-  args: ['install']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PRJECT_ID/reto-devops-clm:v$BUILD_ID']
 # Ejecutamos pruebas
-- name: node
-  entrypoint: npm
-  args: ['test']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push',  'gcr.io/$PRJECT_ID/reto-devops-clm:v$BUILD_ID']
+  env:
+    - CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}
+    - CLOUDSDK_CONTAINER_CLOUSTER=${_CLOUDSDK_CONTAINER_CLOUSTER}
 # Ejecutamos aplicacion
 - name: node
   entrypoint: npm
