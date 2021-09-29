@@ -1,7 +1,7 @@
 # [INICIO cloudbuild_node]
 steps:
 # Intalación de dependencias
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/docker:19.03.8'
   args: ['build', '-t', 'gcr.io/$PRJECT_ID/reto-devops-clm:v$BUILD_ID']
 # Ejecutamos pruebas
 - name: 'gcr.io/cloud-builders/docker'
