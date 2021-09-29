@@ -11,5 +11,5 @@ steps:
 # Ejecutamos aplicacion
 - name: node
   entrypoint: npm
-  args: ['run', 'build']
+  args: ['start']
 # [FIN cloudbuild_node]
