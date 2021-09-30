@@ -21,6 +21,6 @@ app.get('/private', function (req, res) {
   res.send(private);
 });
 
-app.listen(3000, '0.0.0.0', function () {
+app.listen(process.env.PORT || 3001, () => {
   console.log('Example app listening on port 3000!');
 });
